@@ -1,0 +1,18 @@
+#################################################
+# fpp-scripts FPP Scripts Repository index file #
+#################################################
+# Format: Directory,Filename,Description        #
+#################################################
+Control,GoToNextPlaylistItem.sh,Jump to the next item in the current playlist
+Control,GoToPreviousPlaylistItem.sh, Jump to the previous item in the current playlist
+Control,StartPlaylist.sh,Start a playlist and play through it once
+Control,StartRepeatingPlaylist.sh,Start a playlist and play it repeatedly until stopped
+Control,StopPlaylistGracefully.sh,Stop a running playlist gracefully
+Control,StopPlaylist.sh,Stop a running playlist immediately
+RemoteControl,Remote-StartPlaylist.sh,Start a playlist on a remote FPP instance and play through it once
+RemoteControl,Remote-StartRepeatingPlaylist.sh,Start a playlist on a remote FPP instance and play it repeatedly until stopped
+RemoteControl,Remote-StopPlaylistGracefully.sh,Gracefully stop a playlist running on a remote FPP instance
+RemoteControl,Remote-StopPlaylist.sh,Immediately stop a playlist running on a remote FPP instance
+RemoteControl,Remote-TriggerEvent.sh
+System,Reboot.sh,Reboot the Pi
+System,Shutdown.sh,Shutdown the Pi
