@@ -9,9 +9,11 @@ Control,StartPlaylist.sh,Start a playlist and play through it once
 Control,StartRepeatingPlaylist.sh,Start a playlist and play it repeatedly until stopped
 Control,StopPlaylistGracefully.sh,Stop a running playlist gracefully
 Control,StopPlaylist.sh,Stop a running playlist immediately
+# v1.0 sample script, uncomment after v1.0 release
+#Control,UserCallbackHook.sh,Callback script to allow hooking into FPP system scripts
 GPIO,GPIO-On.sh,Turn ON a GPIO Output
 GPIO,GPIO-Off.sh,Turn OFF a GPIO Output
-# Clock and Countdown Pixel Overlay examples commented out until v1.0
+# v1.0 sample scripts, uncomment after v1.0 release
 #PixelOverlay,PixelOverlay-Clock.pl,Scroll a changing clock across a matrix or pixel tree
 #PixelOverlay,PixelOverlay-Countdown.pl,Scroll a Christmas Countdown across a matrix or pixel tree
 PixelOverlay,PixelOverlay-ScrollingText.pl,Scroll static text across a matrix or pixel tree
