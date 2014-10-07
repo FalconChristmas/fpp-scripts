@@ -35,8 +35,14 @@ my $blk   = $fppmm->GetBlockInfo($name);
 # Clear the block, probably not necessary
 $fppmm->SetBlockColor($blk, 0, 0, 0);
 
+# Enable the block (pass 2 for transparent mode, or 3 for transparent RGB)
+$fppmm->SetBlockState($blk, 1);
+
 # Scroll the message
 $fppmm->TextMessage($blk, $msg, $color, $fill, $font, $size, $pos, $dir, $pps);
+
+# Disable the block
+$fppmm->SetBlockState($blk, 0);
 
 # Close the maps (shouldn't make it here with the above "while (1)" loop)
 $fppmm->CloseMaps();
