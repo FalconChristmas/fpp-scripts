@@ -1,26 +1,26 @@
-#################################################
-# fpp-scripts FPP Scripts Repository index file #
-#################################################
-# Format: Directory,Filename,Description        #
-#################################################
-Control,GoToNextPlaylistItem.sh,Jump to the next item in the current playlist
-Control,GoToPreviousPlaylistItem.sh, Jump to the previous item in the current playlist
-Control,StartPlaylist.sh,Start a playlist and play through it once
-Control,StartRepeatingPlaylist.sh,Start a playlist and play it repeatedly until stopped
-Control,StopPlaylistGracefully.sh,Stop a running playlist gracefully
-Control,StopPlaylist.sh,Stop a running playlist immediately
+######################################################
+# fpp-scripts FPP Scripts Repository index file      #
+######################################################
+# Format: Directory,Filename,Description,min_rfs_ver #
+######################################################
+Control,GoToNextPlaylistItem.sh,Jump to the next item in the current playlist,v0.4.0
+Control,GoToPreviousPlaylistItem.sh, Jump to the previous item in the current playlist,v0.4.0
+Control,StartPlaylist.sh,Start a playlist and play through it once,v0.4.0
+Control,StartRepeatingPlaylist.sh,Start a playlist and play it repeatedly until stopped,v0.4.0
+Control,StopPlaylistGracefully.sh,Stop a running playlist gracefully,v0.4.0
+Control,StopPlaylist.sh,Stop a running playlist immediately,v0.4.0
 # v1.0 sample script, uncomment after v1.0 release
-#Control,UserCallbackHook.sh,Callback script to allow hooking into FPP system scripts
-GPIO,GPIO-On.sh,Turn ON a GPIO Output
-GPIO,GPIO-Off.sh,Turn OFF a GPIO Output
-# v1.0 sample scripts, uncomment after v1.0 release
-#PixelOverlay,PixelOverlay-Clock.pl,Scroll a changing clock across a matrix or pixel tree
-#PixelOverlay,PixelOverlay-Countdown.pl,Scroll a Christmas Countdown across a matrix or pixel tree
-PixelOverlay,PixelOverlay-ScrollingText.pl,Scroll static text across a matrix or pixel tree
-RemoteControl,Remote-StartPlaylist.sh,Start a playlist on a remote FPP instance and play through it once
-RemoteControl,Remote-StartRepeatingPlaylist.sh,Start a playlist on a remote FPP instance and play it repeatedly until stopped
-RemoteControl,Remote-StopPlaylistGracefully.sh,Gracefully stop a playlist running on a remote FPP instance
-RemoteControl,Remote-StopPlaylist.sh,Immediately stop a playlist running on a remote FPP instance
-RemoteControl,Remote-TriggerEvent.sh,Trigger an event on a remote FPP instance
-System,Reboot.sh,Reboot the Pi
-System,Shutdown.sh,Shutdown the Pi
+#Control,UserCallbackHook.sh,Callback script to allow hooking into FPP system scripts,v1.0
+GPIO,GPIO-On.sh,Turn ON a GPIO Output,v0.4.0
+GPIO,GPIO-Off.sh,Turn OFF a GPIO Output,v0.4.0
+# Clock and Countdown Pixel Overlay examples commented out until v1.0
+#PixelOverlay,PixelOverlay-Clock.pl,Scroll a changing clock across a matrix or pixel tree,v1.0
+#PixelOverlay,PixelOverlay-Countdown.pl,Scroll a Christmas Countdown across a matrix or pixel tree,v1.0
+PixelOverlay,PixelOverlay-ScrollingText.pl,Scroll static text across a matrix or pixel tree,v0.4.0
+RemoteControl,Remote-StartPlaylist.sh,Start a playlist on a remote FPP instance and play through it once,v0.4.0
+RemoteControl,Remote-StartRepeatingPlaylist.sh,Start a playlist on a remote FPP instance and play it repeatedly until stopped,v0.4.0
+RemoteControl,Remote-StopPlaylistGracefully.sh,Gracefully stop a playlist running on a remote FPP instance,v0.4.0
+RemoteControl,Remote-StopPlaylist.sh,Immediately stop a playlist running on a remote FPP instance,v0.4.0
+RemoteControl,Remote-TriggerEvent.sh,Trigger an event on a remote FPP instance,v0.4.0
+System,Reboot.sh,Reboot the Pi,v0.4.0
+System,Shutdown.sh,Shutdown the Pi,v0.4.0
