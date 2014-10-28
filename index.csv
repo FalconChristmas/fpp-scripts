@@ -24,3 +24,4 @@ RemoteControl,Remote-StopPlaylist.sh,Immediately stop a playlist running on a re
 RemoteControl,Remote-TriggerEvent.sh,Trigger an event on a remote FPP instance,v0.4.0
 System,Reboot.sh,Reboot the Pi,v0.4.0
 System,Shutdown.sh,Shutdown the Pi,v0.4.0
+#
