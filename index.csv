@@ -13,6 +13,8 @@ Control,StopPlaylist.sh,Stop a running playlist immediately,v0.4.0
 #Control,UserCallbackHook.sh,Callback script to allow hooking into FPP system scripts,v1.0
 GPIO,GPIO-On.sh,Turn ON a GPIO Output,v0.4.0
 GPIO,GPIO-Off.sh,Turn OFF a GPIO Output,v0.4.0
+Media,SqueezeLiteStart.sh,Start a SqueezeLite player,v0.4.0
+Media,SqueezeLiteStop.sh,Stop a running SqueezeLite player,v0.4.0
 # Clock and Countdown Pixel Overlay examples commented out until v1.0
 #PixelOverlay,PixelOverlay-Clock.pl,Scroll a changing clock across a matrix or pixel tree,v1.0
 #PixelOverlay,PixelOverlay-Countdown.pl,Scroll a Christmas Countdown across a matrix or pixel tree,v1.0
