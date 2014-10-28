@@ -4,11 +4,6 @@
 # v1.0 - Written By MyKroft - Can Be Used Without Restrictions    #
 ###################################################################
 
-# BINDIR=$(cd $(dirname $0) && pwd)
-
-# . ${BINDIR}/common
-#. ${BINDIR}/functions
-
 . /opt/fpp/scripts/common
 . /opt/fpp/scripts/functions
 
