@@ -20,11 +20,34 @@
 # InstallAction: sudo chmod 755 /usr/bin/squeezelite-armv6hf
 ##############################################################################
 
-SERVER="192.168.1.1"
+##############################################################################
+# To connect to a specific LMS server, fill in the server's IP address
+# in the following SERVER variable.  ie,  SERVER="192.168.1.100"
+##############################################################################
+SERVER=""
 
-#############################################
-
+##############################################################################
+# Use the hostname configured via the FPP Web UI
+##############################################################################
 HOSTNAME=$(hostname)
 
-sudo /usr/bin/squeezelite-armv6hf -s ${SERVER} -n ${HOSTNAME} -z
+##############################################################################
+# To not set the hostname and instead let the identifier be set on the LMS
+# server, uncomment the following line to clear the HOSTNAME variable
+#
+# HOSTNAME=""
+
+#############################################################################
+
+if [ "x${SERVER}" != "x" ]
+then
+	SERVER="-s ${SERVER}"
+fi
+
+if [ "x${HOSTNAME}" != "x" ]
+then
+	HOSTNAME="-n ${HOSTNAME}"
+fi
+
+sudo /usr/bin/squeezelite-armv6hf -z ${SERVER} ${HOSTNAME}
 
