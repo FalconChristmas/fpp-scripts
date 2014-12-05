@@ -7,6 +7,8 @@ Control,GoToNextPlaylistItem.sh,Jump to the next item in the current playlist,v0
 Control,GoToPreviousPlaylistItem.sh, Jump to the previous item in the current playlist,v0.4.0
 Control,StartPlaylist.sh,Start a playlist and play through it once,v0.4.0
 Control,StartRepeatingPlaylist.sh,Start a playlist and play it repeatedly until stopped,v0.4.0
+Control,StaticOn.sh,Turn On channels for static display items,v1.0
+Control,StaticOff.sh,Turn Off channels for static display items,v1.0
 Control,StopPlaylistGracefully.sh,Stop a running playlist gracefully,v0.4.0
 Control,StopPlaylist.sh,Stop a running playlist immediately,v0.4.0
 Control,UserCallbackHook.sh,Callback script to allow hooking into FPP system scripts,v1.0
