@@ -4,5 +4,5 @@
 ###########################################################
 
 # Issue the OS command to reboot Linux
-/usr/sbin/shutdown -r now
+/sbin/shutdown -r now
 

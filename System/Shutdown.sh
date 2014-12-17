@@ -4,5 +4,5 @@
 ###########################################################
 
 # Issue the OS command to shutdown Linux and halt the processor
-/usr/sbin/shutdown -h now
+/sbin/shutdown -h now
 
