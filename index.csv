@@ -11,6 +11,10 @@ Control,StaticOn.sh,Turn On channels for static display items,v1.0
 Control,StaticOff.sh,Turn Off channels for static display items,v1.0
 Control,StopPlaylistGracefully.sh,Stop a running playlist gracefully,v0.4.0
 Control,StopPlaylist.sh,Stop a running playlist immediately,v0.4.0
+Control,SwitchToBridgeMode.sh,Switch a running FPP to Bridge mode,v0.4.0
+Control,SwitchToPlayerMode.sh,Switch a running FPP to Player mode,v0.4.0
+Control,SwitchToMasterMode.sh,Switch a running FPP to Master mode,v0.4.0
+Control,SwitchToRemoteMode.sh,Switch a running FPP to Remote mode,v0.4.0
 Control,UserCallbackHook.sh,Callback script to allow hooking into FPP system scripts,v1.0
 GPIO,GPIO-On.sh,Turn ON a GPIO Output,v0.4.0
 GPIO,GPIO-Off.sh,Turn OFF a GPIO Output,v0.4.0
