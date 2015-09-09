@@ -25,6 +25,9 @@ Media,SqueezeLiteStart.sh,Start a SqueezeLite player,v0.4.0
 Media,SqueezeLiteStop.sh,Stop a running SqueezeLite player,v0.4.0
 Media,MP3StreamerStart.sh,Start A Internet Stream,v0.4.0
 Media,MP3StreamerStop.sh,Stop A Running Internet Stream,v0.4.0
+Media,PlayVideo.sh,Play a video,v0.4.0
+Media,PlayVideoIfNoOtherVideoIsPlaying.sh,Play a video only if no other video is playing,v0.4.0
+Media,StopAnyRunningVideo.sh,Stop any playing video,v0.4.0
 PixelOverlay,PixelOverlay-Clock.pl,Scroll a changing clock across a matrix or pixel tree,v1.0
 PixelOverlay,PixelOverlay-Countdown.pl,Scroll a Christmas Countdown across a matrix or pixel tree,v1.0
 PixelOverlay,PixelOverlay-ScrollingText.pl,Scroll static text across a matrix or pixel tree,v0.4.0
