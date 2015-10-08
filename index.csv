@@ -3,6 +3,7 @@
 ######################################################
 # Format: Directory,Filename,Description,min_rfs_ver #
 ######################################################
+Control,CycleRandomPlaylists.sh,Randomly cycle through playlists,v1.5
 Control,GoToNextPlaylistItem.sh,Jump to the next item in the current playlist,v0.4.0
 Control,GoToPreviousPlaylistItem.sh, Jump to the previous item in the current playlist,v0.4.0
 Control,StartEffect.sh,Start an effect and play it once,v1.5
