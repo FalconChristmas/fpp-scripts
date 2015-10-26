@@ -39,15 +39,78 @@ HOSTNAME=$(hostname)
 
 #############################################################################
 
+# Set the soundcard
+SL_SOUNDCARD="sysdefault:CARD=ALSA"
+#SL_SOUNDCARD="front:CARD=MicroII,DEV=0"
+
+# Uncomment the next line if you want squeezelite to start playing on startup. BE AWARE: If you use this, you
+# should also uncomment and fill-in SERVER (see above). Otherwise this will not work.
+#SL_AUTO_PLAY="Yes"
+
+# Squeezebox server port for sending play and power off commands
+SB_SERVER_CLI_PORT="9090"
+
+
+
 if [ "x${SERVER}" != "x" ]
 then
-	SERVER="-s ${SERVER}"
+	SB_SERVER="-s ${SERVER}"
 fi
 
 if [ "x${HOSTNAME}" != "x" ]
 then
-	HOSTNAME="-n ${HOSTNAME}"
+	SL_HOSTNAME="-n ${HOSTNAME}"
 fi
 
-sudo /usr/bin/squeezelite-armv6hf -z ${SERVER} ${HOSTNAME}
+OTHER_ARGS=""
+
+# add souncard setting if set
+if [ ! -z "$SL_SOUNDCARD" ]
+then
+	OTHER_ARGS="${OTHER_ARGS} -o ${SL_SOUNDCARD}"    
+fi
+
+
+sudo /usr/bin/squeezelite-armv6hf -z ${SB_SERVER} ${SL_HOSTNAME} ${OTHER_ARGS}
+
+
+#
+# Function for telling the player to start playing at a certain volume (optional)
+#
+#play 40
+#
+do_play () {
+    # This function only works if the Squeezebox server IP is set
+    if  [ ! -z "$SERVER" ]; then
+      echo "Sending play command to Squeezebox server"
+      printf "$HOSTNAME play\nexit\n" | nc $SERVER $SB_SERVER_CLI_PORT > /dev/null
+    else
+      echo "The IP address of the Squeezebox server is not set (variable: SERVER should be set). This is needed for the play function."
+    fi
+}
+
+
+if [ ! -z "$SL_AUTO_PLAY" ] && [ "$SL_AUTO_PLAY" = "Yes" ]; then
+  if  [ ! -z "$SERVER" ]; then
+    echo "Wait until player is connected to Squeezebox server before sending play command"
+    for i in $(seq 1 10)
+    do
+      PLAYERCONNECTED=$(printf "$SL_NAME connected ?\nexit\n" | nc ${SERVER} ${SB_SERVER_CLI_PORT}  | tr -s ' '| cut -d ' ' -f3)
+      if [ "$PLAYERCONNECTED" = "1" ]
+      then
+        echo "Player connected to Squeezebox server after $i seconds"
+        break
+      fi
+      echo "Not connected after $i seconds..."
+      sleep 1
+    done
+    if [ "$PLAYERCONNECTED" = "1" ]
+    then
+      do_play
+    else
+      echo "Could not send play command to player $HOSTNAME on Squeezebox server $SERVER"
+    fi
+  fi
+fi
+
 
