@@ -31,11 +31,22 @@ apt-get -y upgrade
 # Disable the onboard soundcard
 sed -i -e "s/^snd-bcm2835/#snd-bcm2835/" /etc/modules
 
+# Enable some new modules
+cat <<-EOF >> /etc/modules
+bcm2708_dmaengine
+snd_soc_pcm512x
+snd_soc_hifiberry_${HIFIBERRY}
+snd_soc_bcm2708_i2s
+EOF
+
 # Remove any pre-existing HiFiBerry boot config entry
 sed -i "/^dtoverlay=hifiberry/d" /boot/config.txt
 
 # Enable the HiFiBerry
-echo "dtoverlay=hifiberry-${HIFIBERRY}" >> /boot/config.txt
+cat <<-EOF >> /boot/config.txt
+dtoverlay=hifiberry-${HIFIBERRY}
+dtparam=i2s=on
+EOF
 
 # Configure ALSA
 cat <<-EOF > /root/.asoundrc
