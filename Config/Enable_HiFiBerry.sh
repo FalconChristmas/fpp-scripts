@@ -29,7 +29,7 @@ apt-get -y update
 apt-get -y upgrade
 
 # Disable the onboard soundcard
-sed -i -e "s/^snd-bcm2835/#snd-bcm2835/" /etc/modules
+sed -i "/snd-bcm2835/d" /etc/modules
 
 # Enable some new modules
 cat <<-EOF >> /etc/modules
