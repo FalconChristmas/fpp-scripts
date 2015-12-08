@@ -15,5 +15,5 @@ VIDEOFILE="PutYourVideoFileNameHere.mp4"
 # Set some environment variables
 . /opt/fpp/scripts/common
 
-sudo /opt/fpp/scripts/omxplayer ${MEDIADIR}/videos/${VIDEOFILE}
+sudo -u fpp /usr/bin/omxplayer --no-keys ${MEDIADIR}/videos/${VIDEOFILE}
 
