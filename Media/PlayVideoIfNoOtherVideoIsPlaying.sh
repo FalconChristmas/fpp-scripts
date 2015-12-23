@@ -18,6 +18,6 @@ VIDEOFILE="PutYourVideoFileNameHere.mp4"
 
 if [ -z "$(pgrep omxplayer.bin)" ]
 then
-	sudo -u fpp /usr/bin/omxplayer --no-keys ${MEDIADIR}/videos/${VIDEOFILE}
+	sudo -u fpp /usr/bin/omxplayer --no-keys "${MEDIADIR}/videos/${VIDEOFILE}"
 fi
 
