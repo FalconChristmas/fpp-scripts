@@ -17,6 +17,9 @@ MODEL="StaticElements"
 # Turn off all the channels in the model by setting their values to 255
 fppmm -m ${MODEL} -s 0
 
+# Sleep a little to let the new value be sent otu to the controllers
+sleep 1
+
 # Turn off the model in overlay mode
 fppmm -m ${MODEL} -o off
 
