@@ -24,6 +24,8 @@ Control,SwitchToRemoteMode.sh,Switch a running FPP to Remote mode,v0.4.0
 Control,UserCallbackHook.sh,Callback script to allow hooking into FPP system scripts,v1.0
 GPIO,GPIO-On.sh,Turn ON a GPIO Output,v0.4.0
 GPIO,GPIO-Off.sh,Turn OFF a GPIO Output,v0.4.0
+GPIO,LongShort-ButtonPressed.sh,Script 1 of 2 to allow a single GPIO input to serve two functions.  Needs LongShort-ButtonReleased.sh as well.,v1.0
+GPIO,LongShort-ButtonReleased.sh,Script 2 of 2 to allow a single GPIO input to serve two functions.  Needs LongShort-ButtonPressed.sh as well.,v1.0
 Media,SqueezeLiteStart.sh,Start a SqueezeLite player,v0.4.0
 Media,SqueezeLiteStop.sh,Stop a running SqueezeLite player,v0.4.0
 Media,MP3StreamerStart.sh,Start A Internet Stream,v0.4.0
