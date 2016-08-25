@@ -8,6 +8,7 @@ Control,CheckIfPlaying.sh,Run scripts based on whether or not FPP is currently p
 Control,CycleRandomPlaylists.sh,Randomly cycle through playlists,v1.5
 Control,GoToNextPlaylistItem.sh,Jump to the next item in the current playlist,v0.4.0
 Control,GoToPreviousPlaylistItem.sh, Jump to the previous item in the current playlist,v0.4.0
+Control,PlayEffectWhenNotPlayingFSEQ.sh,Play an effect sequence whenever a .fseq sequence is not running,v1.0
 Control,StartEffect.sh,Start an effect and play it once,v1.5
 Control,StartEffectLooping.sh,Start an effect and loop until stopped,v1.5
 Control,StartPlaylist.sh,Start a playlist and play through it once,v0.4.0
