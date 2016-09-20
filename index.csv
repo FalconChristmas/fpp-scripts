@@ -42,6 +42,7 @@ RemoteControl,Remote-StartPlaylist.sh,Start a playlist on a remote FPP instance 
 RemoteControl,Remote-StartRepeatingPlaylist.sh,Start a playlist on a remote FPP instance and play it repeatedly until stopped,v0.4.0
 RemoteControl,Remote-StopPlaylistGracefully.sh,Gracefully stop a playlist running on a remote FPP instance,v0.4.0
 RemoteControl,Remote-StopPlaylist.sh,Immediately stop a playlist running on a remote FPP instance,v0.4.0
+RemoteControl,Remote-RunScript.sh,Run a script on a remote FPP instance,v1.5.0
 RemoteControl,Remote-TriggerEvent.sh,Trigger an event on a remote FPP instance,v0.4.0
 System,Reboot.sh,Reboot the Pi,v0.4.0
 System,Shutdown.sh,Shutdown the Pi,v0.4.0
