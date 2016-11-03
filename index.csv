@@ -9,6 +9,9 @@ Control,CycleRandomPlaylists.sh,Randomly cycle through playlists,v1.5
 Control,GoToNextPlaylistItem.sh,Jump to the next item in the current playlist,v0.4.0
 Control,GoToPreviousPlaylistItem.sh, Jump to the previous item in the current playlist,v0.4.0
 Control,PlayEffectWhenNotPlayingFSEQ.sh,Play an effect sequence whenever a .fseq sequence is not running,v1.0
+Control,ScheduledPlaylistEnable.sh,Enable a scheduled playlist,v1.0
+Control,ScheduledPlaylistDisable.sh,Disable a scheduled playlist,v1.0
+Control,ScheduledPlaylistsUpdate.sh,Enable/Disable multiple scheduled playlists,v1.0
 Control,StartEffect.sh,Start an effect and play it once,v1.5
 Control,StartEffectLooping.sh,Start an effect and loop until stopped,v1.5
 Control,StartPlaylist.sh,Start a playlist and play through it once,v0.4.0
@@ -45,6 +48,7 @@ RemoteControl,Remote-StopPlaylistGracefully.sh,Gracefully stop a playlist runnin
 RemoteControl,Remote-StopPlaylist.sh,Immediately stop a playlist running on a remote FPP instance,v0.4.0
 RemoteControl,Remote-RunScript.sh,Run a script on a remote FPP instance,v1.5.0
 RemoteControl,Remote-TriggerEvent.sh,Trigger an event on a remote FPP instance,v0.4.0
-System,Reboot.sh,Reboot the Pi,v0.4.0
-System,Shutdown.sh,Shutdown the Pi,v0.4.0
+System,Reboot.sh,Reboot the Pi/BBB,v0.4.0
+System,Shutdown.sh,Shutdown the Pi/BBB,v0.4.0
+System,ShutdownRemotes.sh,Shutdown a set of Remote FPP instances,v1.5.0
 #
