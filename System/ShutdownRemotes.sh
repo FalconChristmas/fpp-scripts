@@ -11,6 +11,6 @@ REMOTE_IPS="IP1 IP2 IP3"
 
 for IP in ${REMOTE_IPS}
 do
-	echo curl http://${IP}/runEventScript.php?scriptName=Shutdown.sh
+	curl http://${IP}/runEventScript.php?scriptName=Shutdown.sh
 done
 
