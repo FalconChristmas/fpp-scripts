@@ -1,6 +1,6 @@
 #!/bin/sh
 
-PLAYLISTNAME="Test"
+PLAYLISTNAME=$2
 
 /opt/fpp/bin.pi/fpp -S
 

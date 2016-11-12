@@ -2,7 +2,6 @@
 
 ChangeAmount=$2
 STATUS=$(/opt/fpp/bin.pi/fpp -s | cut -d',' -f3)
-echo $2
 
 if [ $# -eq 2 -a $1 = "SET" ]; then
 setvol=$ChangeAmount
