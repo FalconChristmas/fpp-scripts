@@ -9,7 +9,7 @@ then
 fi
 
 echo "Creating /etc/init.d/overlayroot init script"
-cat <<-EOF | sudo tee -a /etc/init.d/overlayroot > /dev/null
+cat <<-EOF | sudo tee /etc/init.d/overlayroot > /dev/null
 #!/bin/sh
 ### BEGIN INIT INFO
 # Provides:          overlayroot
