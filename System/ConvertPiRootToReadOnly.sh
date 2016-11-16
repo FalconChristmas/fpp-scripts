@@ -37,8 +37,11 @@ mount -t overlay -o lowerdir=/etc.ro,upperdir=/etc.rw/upper,workdir=/etc.rw/work
 
 EOF
 
+echo "Marking /etc/init.d/overlayroot executable"
+chmod 755 /etc/init.d/overlayroot
+
 echo "Activating /etc/init.d/overlayroot init script"
-sudo update-rc.d overlayroot enable
+sudo update-rc.d overlayroot defaults
 
 echo "Adding 'fastboot ro' to kernel boot arguments"
 sudo sed -i -e "s/ fastboot ro$//" /boot/cmdline.txt
