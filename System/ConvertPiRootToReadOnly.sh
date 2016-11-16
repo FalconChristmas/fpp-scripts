@@ -44,6 +44,10 @@ echo "Adding 'fastboot ro' to kernel boot arguments"
 sudo sed -i -e "s/ fastboot ro$//" /boot/cmdline.txt
 sudo sed -i -e "s/$/ fastboot ro/" /boot/cmdline.txt
 
+echo "Updating /etc/fstab to mount root and /boot read-only"
+sudo sed -i -e "s/vfat.*defaults/vfat    ro,defaults/" /etc/fstab
+sudo sed -i -e "s/ext4.*defaults/ext4    ro,defaults/" /etc/fstab
+
 echo "Making /etc.ro and /etc.rw directories for overlay filesystem"
 sudo mkdir /etc.ro
 sudo mkdir /etc.rw
