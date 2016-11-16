@@ -9,7 +9,7 @@ then
 fi
 
 echo "Creating /etc/init.d/overlayroot init script"
-cat > /etc/init.d/overlayroot <<-EOF
+cat <<-EOF | sudo tee -a /etc/init.d/overlayroot > /dev/null
 #!/bin/sh
 ### BEGIN INIT INFO
 # Provides:          overlayroot
@@ -38,20 +38,23 @@ mount -t overlay -o lowerdir=/etc.ro,upperdir=/etc.rw/upper,workdir=/etc.rw/work
 EOF
 
 echo "Activating /etc/init.d/overlayroot init script"
-update-rc.d overlayroot enable
+sudo update-rc.d overlayroot enable
 
 echo "Adding 'fastboot ro' to kernel boot arguments"
-sed -i -e "s/ fastboot ro$//" /boot/cmdline.txt
-sed -i -e "s/$/ fastboot ro/" /boot/cmdline.txt
+sudo sed -i -e "s/ fastboot ro$//" /boot/cmdline.txt
+sudo sed -i -e "s/$/ fastboot ro/" /boot/cmdline.txt
 
 echo "Making /etc.ro and /etc.rw directories for overlay filesystem"
-mkdir /etc.ro
-mkdir /etc.rw
+sudo mkdir /etc.ro
+sudo mkdir /etc.rw
 
 echo "Copying contents of /etc to /etc.ro for underlay"
-rsync -av /etc/ /etc.ro/
+sudo rsync -av /etc/ /etc.ro/
 
 echo "============================================================================="
 echo "Setup complete, you will need to reboot the Pi for the changes to take effect"
+echo "This script will self-delete to prevent re-running."
 echo "============================================================================="
+
+sudo rm -f /home/fpp/media/scripts/ConvertPiRootToReadOnly.sh
 
