@@ -53,7 +53,7 @@ sudo mkdir /etc.ro
 sudo mkdir /etc.rw
 
 echo "Copying contents of /etc to /etc.ro for underlay"
-sudo rsync -av /etc/ /etc.ro/
+sudo rsync -a /etc/ /etc.ro/
 
 echo "============================================================================="
 echo "Setup complete, you will need to reboot the Pi for the changes to take effect"
