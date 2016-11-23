@@ -38,7 +38,7 @@ mount -t overlay -o lowerdir=/etc.ro,upperdir=/etc.rw/upper,workdir=/etc.rw/work
 EOF
 
 echo "Marking /etc/init.d/overlayroot executable"
-chmod 755 /etc/init.d/overlayroot
+sudo chmod 755 /etc/init.d/overlayroot
 
 echo "Activating /etc/init.d/overlayroot init script"
 sudo update-rc.d overlayroot defaults
