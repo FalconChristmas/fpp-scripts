@@ -48,6 +48,8 @@ RemoteControl,Remote-StopPlaylistGracefully.sh,Gracefully stop a playlist runnin
 RemoteControl,Remote-StopPlaylist.sh,Immediately stop a playlist running on a remote FPP instance,v0.4.0
 RemoteControl,Remote-RunScript.sh,Run a script on a remote FPP instance,v1.5
 RemoteControl,Remote-TriggerEvent.sh,Trigger an event on a remote FPP instance,v0.4.0
+System,fppdWatcher.sh,Script to watch for fppd not running and restart if necessary,v1.0
+System,fppdWatcherStart.sh,Script to start fppdWatcher.sh detatched,v1.0
 System,Reboot.sh,Reboot the Pi/BBB,v0.4.0
 System,Shutdown.sh,Shutdown the Pi/BBB,v0.4.0
 System,ShutdownRemotes.sh,Shutdown a set of Remote FPP instances,v1.5
