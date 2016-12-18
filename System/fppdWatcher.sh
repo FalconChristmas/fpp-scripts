@@ -24,5 +24,14 @@ do
 			;;
 	esac
 
+	curl -m 2 http://localhost/fppjson.php?command=getFPPstatus 2> /dev/null | grep '"running"' > /dev/null
+	if [ $? -ne 0 ]
+	then
+		sudo /opt/fpp/scripts/fppd_stop
+		sudo /opt/fpp/scripts/fppd_start
+	fi
+
+	find /var/tmp -name sess_* -cmin +24 -exec rm {} \;
+
 	sleep 30
 done
