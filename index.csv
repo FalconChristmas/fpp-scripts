@@ -54,4 +54,6 @@ System,Reboot.sh,Reboot the Pi/BBB,v0.4.0
 System,Shutdown.sh,Shutdown the Pi/BBB,v0.4.0
 System,ShutdownRemotes.sh,Shutdown a set of Remote FPP instances,v1.5
 System,ConvertPiRootToReadOnly.sh,Convert a Pi's SD card to read-only.  WARNING: Currently for beta testers only!,v1.8
+System,DisableOnboardWifi-Pi3.sh,Disable a Pi3's onboard WiFi (needs reboot),v1.8
+System,EnableOnboardWifi-Pi3.sh,Enable a Pi3's onboard WiFi (needs reboot),v1.8
 #
