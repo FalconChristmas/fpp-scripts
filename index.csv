@@ -53,8 +53,8 @@ System,fppdWatcherStart.sh,Script to start fppdWatcher.sh detatched,v1.0
 System,Reboot.sh,Reboot the Pi/BBB,v0.4.0
 System,Shutdown.sh,Shutdown the Pi/BBB,v0.4.0
 System,ShutdownRemotes.sh,Shutdown a set of Remote FPP instances,v1.5
-System,ConvertPiRootToReadOnly.sh,Convert a Pi's SD card to read-only.
-System,ConvertReadOnlyPitoRW.sh,Convert a Pi's Read-Only SD card back to Read-Write.
+System,ConvertPiRootToReadOnly.sh,Convert a Pi's SD card to read-only.,v1.8
+System,ConvertReadOnlyPitoRW.sh,Convert a Pi's Read-Only SD card back to Read-Write.,v1.8
 System,DisableOnboardWifi-Pi3.sh,Disable a Pi3's onboard WiFi (needs reboot),v1.5
 System,EnableOnboardWifi-Pi3.sh,Enable a Pi3's onboard WiFi (needs reboot),v1.5
 System,UpdateOmxplayerForAlsa.sh,*BETA* script to update omxplayer on FPP v1.8 SD Pi image to support ALSA and USB sound cards,v1.8
