@@ -58,4 +58,5 @@ System,ConvertReadOnlyPitoRW.sh,Convert a Pi's Read-Only SD card back to Read-Wr
 System,DisableOnboardWifi-Pi3.sh,Disable a Pi3's onboard WiFi (needs reboot),v1.5
 System,EnableOnboardWifi-Pi3.sh,Enable a Pi3's onboard WiFi (needs reboot),v1.5
 System,UpdateOmxplayerForAlsa.sh,*BETA* script to update omxplayer on FPP v1.8 SD Pi image to support ALSA and USB sound cards,v1.8
+System,UpdateGitRepoOrigin.sh,Update FPP Git Repository Origin URL,v2.5
 #
