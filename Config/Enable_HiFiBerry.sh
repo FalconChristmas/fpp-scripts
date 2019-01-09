@@ -24,9 +24,13 @@ then
 	exit
 fi
 
-# pull in the updates so we can get the newer kernel needed by the HiFiBerry
-apt-get -y update
-apt-get -y upgrade
+IMGVER=$(head -1 /etc/fpp/rfs_version | cut -c1-2)
+if [ "x${IMGVER}" = "xv1" ]
+then
+	# pull in the updates so we can get the newer kernel needed by the HiFiBerry
+	apt-get -y update
+	apt-get -y upgrade
+fi
 
 # Disable the onboard soundcard
 sed -i "/snd-bcm2835/d" /etc/modules
