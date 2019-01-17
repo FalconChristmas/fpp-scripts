@@ -7,13 +7,13 @@
 # HiFiBerry you want to configure.  Comment out the dacplus line if you are
 # not using a HiFiBerry DAC+ standard/pro.
 ##############################################################################
-# DAC/DAC+ Light
+# DAC/DAC+ Light/DAC Zero/MiniAmp/BeoCreate/DAC+ DSP
 #HIFIBERRY=dac
-# DAC+ standard/pro
+# DAC+ standard/pro/Amp2
 HIFIBERRY=dacplus
 # Digi/Digi+
 #HIFIBERRY=digi
-# Amp/Amp+
+# Amp+ (not Amp2)
 #HIFIBERRY=amp
 ##############################################################################
 
