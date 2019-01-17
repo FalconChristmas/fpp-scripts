@@ -7,6 +7,9 @@
 # HiFiBerry you want to configure.  Comment out the dacplus line if you are
 # not using a HiFiBerry DAC+ standard/pro.
 ##############################################################################
+# List below is from:
+# https://www.hifiberry.com/build/documentation/configuring-linux-3-18-x/
+##############################################################################
 # DAC/DAC+ Light/DAC Zero/MiniAmp/BeoCreate/DAC+ DSP
 #HIFIBERRY=dac
 # DAC+ standard/pro/Amp2
