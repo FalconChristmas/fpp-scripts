@@ -1,8 +1,8 @@
-######################################################
-# fpp-scripts FPP Scripts Repository index file      #
-######################################################
-# Format: Directory,Filename,Description,min_rfs_ver #
-######################################################
+##################################################################
+# fpp-scripts FPP Scripts Repository index file                  #
+##################################################################
+# Format: Directory,Filename,Description,min_rfs_ver,max_rfs_ver #
+##################################################################
 Config,Enable_HiFiBerry.sh,Script to enable support for a HiFiBerry DAC on the Pi,v1.5
 Control,CheckIfPlaying.sh,Run scripts based on whether or not FPP is currently playing a sequence of some sort,v1.5
 Control,CycleRandomPlaylists.sh,Randomly cycle through playlists,v1.5
@@ -38,10 +38,13 @@ Media,PlayVideo.sh,Play a video,v0.4.0
 Media,PlayVideoIfNoOtherVideoIsPlaying.sh,Play a video only if no other video is playing,v0.4.0
 Media,StopAnyRunningVideo.sh,Stop any playing video,v0.4.0
 Media,DisplayStaticImage.sh,Display a static image file on video output,v1.0
-PixelOverlay,PixelOverlay-Clock.pl,Scroll a changing clock across a matrix or pixel tree,v1.0
-PixelOverlay,PixelOverlay-Countdown.pl,Scroll a Christmas Countdown across a matrix or pixel tree,v1.0
-PixelOverlay,PixelOverlay-ScrollingText.pl,Scroll static text across a matrix or pixel tree,v0.4.0
-PixelOverlay,PixelOverlay-ScrollingTextMultiMatrix.pl,Scroll a text string across a pair of identical matrices,v1.0
+PixelOverlay,PixelOverlay-Clock.pl,Scroll a changing clock across a matrix or pixel tree,v1.0,v2.6.99
+PixelOverlay,PixelOverlay-Countdown.pl,Scroll a Christmas Countdown across a matrix or pixel tree,v1.0,v2.6.99
+PixelOverlay,PixelOverlay-ScrollingText.pl,Scroll static text across a matrix or pixel tree,v0.4.0,v2.6.99
+PixelOverlay,PixelOverlay-ScrollingTextMultiMatrix.pl,Scroll a text string across a pair of identical matrices,v1.0,v2.6.99
+PixelOverlay,PixelOverlay-Clock.php,Scroll a changing clock across a matrix or pixel tree,v2.7
+PixelOverlay,PixelOverlay-Countdown.php,Scroll a Christmas Countdown across a matrix or pixel tree,v2.7
+PixelOverlay,PixelOverlay-ScrollingText.php,Scroll static text across a matrix or pixel tree,v2.7
 RemoteControl,Remote-StartPlaylist.sh,Start a playlist on a remote FPP instance and play through it once,v0.4.0
 RemoteControl,Remote-StartRepeatingPlaylist.sh,Start a playlist on a remote FPP instance and play it repeatedly until stopped,v0.4.0
 RemoteControl,Remote-StopPlaylistGracefully.sh,Gracefully stop a playlist running on a remote FPP instance,v0.4.0
@@ -55,10 +58,10 @@ System,fppdWatcherStart.sh,Script to start fppdWatcher.sh detatched,v1.0
 System,Reboot.sh,Reboot the Pi/BBB,v0.4.0
 System,Shutdown.sh,Shutdown the Pi/BBB,v0.4.0
 System,ShutdownRemotes.sh,Shutdown a set of Remote FPP instances,v1.5
-System,ConvertPiRootToReadOnly.sh,Convert a Pi's SD card to read-only.,v1.8
-System,ConvertReadOnlyPitoRW.sh,Convert a Pi's Read-Only SD card back to Read-Write.,v1.8
+System,ConvertPiRootToReadOnly.sh,Convert a Pi's SD card to read-only.,v1.8,v2.1
+System,ConvertReadOnlyPitoRW.sh,Convert a Pi's Read-Only SD card back to Read-Write.,v1.8,v2.1
 System,DisableOnboardWifi-Pi3.sh,Disable a Pi3's onboard WiFi (needs reboot),v1.5
 System,EnableOnboardWifi-Pi3.sh,Enable a Pi3's onboard WiFi (needs reboot),v1.5
-System,UpdateOmxplayerForAlsa.sh,*BETA* script to update omxplayer on FPP v1.8 SD Pi image to support ALSA and USB sound cards,v1.8
+System,UpdateOmxplayerForAlsa.sh,*BETA* script to update omxplayer on FPP v1.8 SD Pi image to support ALSA and USB sound cards,v1.8,v2.0
 System,UpdateGitRepoOrigin.sh,Update FPP Git Repository Origin URL,v2.5
 #
