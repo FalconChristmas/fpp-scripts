@@ -5,7 +5,7 @@
 
 # Check to see if this watcher script is already running
 BASE=$(basename $0)
-OTHERPID=$(ps -edaf | grep ${BASE} | grep -v grep | grep -v " $$ " | awk '{print $2}')
+OTHERPID=$(ps -edaf | grep ${BASE} | grep -v grep | grep -v eventScript | grep -v " $$ " | awk '{print $2}')
 if [ -n "${OTHERPID}" ]
 then
 	echo "The ${BASE} script is already running as PID ${OTHERPID}"
