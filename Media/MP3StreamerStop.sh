@@ -1,7 +1,6 @@
 #!/bin/bash
 ###################################################################
 # MP3StreamerStop.sh - Stop Stream Started by MP3StreamerStart.sh #
-# v1.0 - Written By MyKroft - Can Be Used Without Restrictions    #
 ###################################################################
 
 . /opt/fpp/scripts/common
@@ -20,7 +19,7 @@ while [ $VolumeDecrease -gt 0 ];  do
 done
 
 # stop mpg123
-kill -9 $(cat /tmp/mpg123.pid)
+kill -9 $(cat /tmp/mp3streamer.pid)
 
 # Set Volume Back To Orig Level
 Volume=$(echo "scale=2 ; ${CurrentVolume} / 2.0 + 50" | bc)

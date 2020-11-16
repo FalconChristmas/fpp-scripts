@@ -1,23 +1,23 @@
 #!/bin/bash
 ###################################################################
 # PlayVideoIfNoOtherVideoIsPlaying.sh - Start a video playing     #
-#            using omxplayer IF there is no other video playing   #
+#            using cvlc IF there is no other video playing        #
 #                                                                 #
-# The video will play until it is done playing or omxplayer is    #
+# The video will play until it is done playing or cvlc is         #
 # stopped.                                                        #
 #                                                                 #
 ###################################################################
 
 # Edit this line to specify the name of the video to play.  The
-# video must be a .mp4 file in FPP's videos directory.
+# video must be a video file in FPP's videos directory.
 VIDEOFILE="PutYourVideoFileNameHere.mp4"
 
 ###################################################################
 # Set some environment variables
 . /opt/fpp/scripts/common
 
-if [ -z "$(pgrep omxplayer.bin)" ]
+if [ -z "$(pgrep cvlc)" ]
 then
-	sudo -u fpp /usr/bin/omxplayer --no-keys "${MEDIADIR}/videos/${VIDEOFILE}"
+	sudo -u fpp cvlc -q "${MEDIADIR}/videos/${VIDEOFILE}"
 fi
 
