@@ -10,7 +10,7 @@
 STREAMURL="http://relay5.181.fm:11082"
 
 # Edit this line to hold any options required in quotes
-STREAMOPTIONS="-q "
+STREAMOPTIONS="-q --no-video-title-show"
 
 cvlc ${STREAMOPTIONS} ${STREAMURL} &
 echo $! >/tmp/mp3streamer.pid

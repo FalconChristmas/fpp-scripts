@@ -18,6 +18,6 @@ VIDEOFILE="PutYourVideoFileNameHere.mp4"
 
 if [ -z "$(pgrep cvlc)" ]
 then
-	sudo -u fpp cvlc -q "${MEDIADIR}/videos/${VIDEOFILE}"
+	sudo -u fpp cvlc --no-video-title-show -q "${MEDIADIR}/videos/${VIDEOFILE}"
 fi
 

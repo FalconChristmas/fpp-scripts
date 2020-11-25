@@ -15,5 +15,5 @@ VIDEOFILE="PutYourVideoFileNameHere.mp4"
 # Set some environment variables
 . /opt/fpp/scripts/common
 
-sudo -u fpp cvlc -q "${MEDIADIR}/videos/${VIDEOFILE}"
+sudo -u fpp cvlc -q --no-video-title-show "${MEDIADIR}/videos/${VIDEOFILE}"
 
