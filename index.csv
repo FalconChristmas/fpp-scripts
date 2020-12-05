@@ -5,7 +5,8 @@
 ##################################################################
 Config,Enable_HiFiBerry.sh,Script to enable support for a HiFiBerry DAC on the Pi,v1.5
 Control,CheckIfPlaying.sh,Run scripts based on whether or not FPP is currently playing a sequence of some sort,v1.5
-Control,CycleRandomPlaylists.sh,Randomly cycle through playlists,v1.5
+Control,CycleRandomPlaylists.sh,Randomly cycle through playlists,v3.0
+Control,CycleRandomSequences.sh,Randomly cycle through sequences,v3.0
 Control,GoToNextPlaylistItem.sh,Jump to the next item in the current playlist,v0.4.0
 Control,GoToPreviousPlaylistItem.sh, Jump to the previous item in the current playlist,v0.4.0
 Control,PlayEffectWhenNotPlayingFSEQ.sh,Play an effect sequence whenever a .fseq sequence is not running,v1.0
