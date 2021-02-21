@@ -17,8 +17,8 @@ echo "Image Type: $TYPE"
 
 echo "Download the image"
 
-LOCATION=$(curl -s https://api.github.com/repos/FalconChristmas/fpp/releases/latest \
-| grep "browser_download_url.*$TYPE-v[0-9].[0-9].\?[0-9]\?.fppos" \
+LOCATION=$(curl -s https://api.github.com/repos/FalconChristmas/fpp/releases \
+| grep "browser_download_url.*$TYPE-v[0-9].[0-9].\?[0-9]\?.fppos" -m 1 \
 | cut -d ":" -f 2,3 \
 | tr -d \" \
 | tr -d [:space:] \
