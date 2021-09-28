@@ -66,6 +66,6 @@ System,EnableOnboardWifi-Pi3.sh,Enable a Pi3's onboard WiFi (needs reboot),v1.5
 System,UpdateOmxplayerForAlsa.sh,*BETA* script to update omxplayer on FPP v1.8 SD Pi image to support ALSA and USB sound cards,v1.8,v2.0
 System,UpdateGitRepoOrigin.sh,Update FPP Git Repository Origin URL,v2.5
 System,Fix_FPP_Update_Script.sh,Update git_pull script to allow continued updates from FPP git source repository,v2.0
-System,DownloadFPPOS.sh,Download the Lastest FPPOS File off the GitHub Releases Page,v3.6.2,v5.1.99
+System,DownloadFPPOS.sh,Download the Lastest FPPOS File off the GitHub Releases Page,v3.6.2,v5.2
 Control,Send_Email_Script.sh,Send email as configured in FPP Settings. NOTE: Due to security settings on Gmail for this to work requires you to enable the "Less secure app access" in your Gmail account,v2.0
 #
