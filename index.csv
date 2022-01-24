@@ -4,6 +4,7 @@
 # Format: Directory,Filename,Description,min_rfs_ver,max_rfs_ver #
 ##################################################################
 Config,Enable_HiFiBerry.sh,Script to enable support for a HiFiBerry DAC on the Pi,v1.5
+Config,SetupDPI.sh,Script to install DPI device tree overlay on RPi,v1.0
 Control,CheckIfPlaying.sh,Run scripts based on whether or not FPP is currently playing a sequence of some sort,v1.5
 Control,CycleRandomPlaylists.sh,Randomly cycle through playlists,v3.0
 Control,CycleRandomSequences.sh,Randomly cycle through sequences,v3.0
