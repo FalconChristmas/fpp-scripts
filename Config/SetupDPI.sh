@@ -128,8 +128,8 @@ sudo cp ${CONFIG} ${CONFIG_BK}  #make a backup before changing
 if grep -q "^dtoverlay=${OVLNAME}" "${CONFIG}"; then
   echo "DPI settings already found in ${CONFIG}, only updating timing."
 #kludge: change sed delim to avoid "unknown option to `s'" error
-  sudo sed -i "s!^\s*dtoverlay\s*=\s*dpi.*!#updated ${WHEN}\n#&\ndtoverlay=${OVLNAME}!g" ${CONFIG}
-  sudo sed -i "s!^\s*\(dpi\|hdmi\)_timings\s*=.*!#updated ${WHEN}\n#&\ndpi_timings=${TIMING}!g" ${CONFIG}
+  sudo sed -i "s!^\s*dtoverlay\s*=\s*dpi.*!#updated ${WHEN} pins ${DPI_PINS}\n#&\ndtoverlay=${OVLNAME}!g" ${CONFIG}
+  sudo sed -i "s!^\s*\(dpi\|hdmi\)_timings\s*=.*!#updated ${WHEN} ${FPS} fps\n#&\ndpi_timings=${TIMING}!g" ${CONFIG}
 #TODO: other entries like hdmi, overscan, etc?
 else
 #no worky: sudo cat <<CFG_EOF >> ${CONFIG}
@@ -138,12 +138,12 @@ else
 ######################################
 # DPI entries added ${WHEN}
 ######################################
-dtoverlay=${OVLNAME}
+dtoverlay=${OVLNAME} #pins ${DPI_PINS}
 # DPI: invert clock (data on falling edge), data valid, RGB order, 24-bit 888
 dpi_output_format=0x17
 dpi_group=2
 dpi_mode=87
-dpi_timings=${TIMING}
+dpi_timings=${TIMING} #${FPS} fps
 # Other settings (uncomment if needed):
 #gpu_mem=128
 # Avoid conflicts:
