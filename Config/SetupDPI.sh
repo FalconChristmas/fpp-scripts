@@ -66,6 +66,7 @@ esac
 # For more info, see:
 # https://www.raspberrypi.org/documentation/configuration/device-tree.md
 # https://github.com/raspberrypi/linux/tree/rpi-5.4.y/arch/arm/boot/dts/overlays/dpi24-ovrlay.dts
+# https://www.kernel.org/doc/Documentation/devicetree/overlay-notes.txt
 # https://raspberrypi.stackexchange.com/questions/62903/how-to-detect-a-device-tree-overlay-at-run-time
 WHEN=`date +"%D %T"`
 
@@ -177,10 +178,12 @@ CFG_EOF
   echo "DPI entries added to ${CONFIG}."
 fi
 
+echo
+echo "Done. Reboot for changes to take effect."
 # shutdown -r now  #reboot for the changes to take effect
-echo "NOTE: need to reboot."
 echo "To verify (after reboot), use one of these commands:"
 echo "gpio readall  #should show 'ALT2' for DPI pins"
 echo "sudo ls -R /sys | grep dpi24_masked"
+echo "hexdump -C /sys/firmware/devicetree/base/soc/gpio@7e200000/dpi24_pins/brcm,pins  #shows list of pins (uint32) enabled for DPI"
 
 #eof
