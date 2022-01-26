@@ -20,7 +20,7 @@ OVLNAME=dpi24_masked
 # Get tools:
 #sudo apt install dtc  #overlay compiler
 if which gpio; then
-  echo "WiringPi already installed."
+  echo "WiringPi (test tool) already installed."
 else
   sudo apt install wiringpi  #useful test utility
 fi
@@ -132,6 +132,8 @@ if grep -q "^dtoverlay=${OVLNAME}" "${CONFIG}"; then
   sudo sed -i "s!^\s*dtoverlay\s*=\s*dpi.*!#updated ${WHEN} pins ${DPI_PINS}\n#&\ndtoverlay=${OVLNAME}!g" ${CONFIG}
   sudo sed -i "s!^\s*\(dpi\|hdmi\)_timings\s*=.*!#updated ${WHEN} ${FPS} fps\n#&\ndpi_timings=${TIMING}!g" ${CONFIG}
 #TODO: other entries like hdmi, overscan, etc?
+  echo "old list of DPI pins:"
+  hexdump -x /sys/firmware/devicetree/base/soc/gpio@7e200000/dpi24_pins/brcm,pins 
 else
 #no worky: sudo cat <<CFG_EOF >> ${CONFIG}
   sudo tee -a ${CONFIG} > /dev/null << CFG_EOF
