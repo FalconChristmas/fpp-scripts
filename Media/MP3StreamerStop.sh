@@ -19,7 +19,7 @@ while [ $VolumeDecrease -gt 0 ];  do
 done
 
 # stop mpg123
-kill -9 $(cat /tmp/mp3streamer.pid)
+kill -9 $(cat /var/run/mp3streamer.pid)
 
 # Set Volume Back To Orig Level
 Volume=$(echo "scale=2 ; ${CurrentVolume} / 2.0 + 50" | bc)
