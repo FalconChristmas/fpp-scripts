@@ -13,5 +13,5 @@ STREAMURL="http://relay5.181.fm:11082"
 STREAMOPTIONS="-q --no-video-title-show"
 
 cvlc ${STREAMOPTIONS} ${STREAMURL} &
-echo $! >/tmp/mp3streamer.pid
+echo $! >/var/run/mp3streamer.pid
 
