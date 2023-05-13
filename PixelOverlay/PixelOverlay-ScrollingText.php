@@ -57,8 +57,6 @@
     do_put("http://$host/api/overlays/model/$name/state",
             json_encode($data));
     
-    
-    # Loop forever (ie, you'll need to CTRL-C to stop this script or kill it)
     $data = array('Message' => $msg,
                   'Color' => $color,
                   'Font' => $font,
@@ -66,14 +64,15 @@
                   'AntiAlias' => $antiAlias,
                   'Position' => $pos,
                   'PixelsPerSecond' => $pps);
-    do_put("http://$host/api/overlays/model/$name/text",
+        do_put("http://$host/api/overlays/model/$name/text",
             json_encode($data));
     
-    
-    while ($running) {
-        
-    }
     /*
+    # Sleep for long enough to scroll
+    # Normally not needed as the text will continue to scroll until it 
+    # scrolls of the side, but if you then want to disable/clear the model
+    * afterwords, you may need this
+    sleep(10);
     # Clear the block
     file_get_contents("http://$host/api/overlays/model/$name/clear");
     # Disable the block
