@@ -31,13 +31,13 @@ GPIO,GPIO-On.sh,Turn ON a GPIO Output,v2.0.0
 GPIO,GPIO-Off.sh,Turn OFF a GPIO Output,v2.0.0
 GPIO,LongShort-ButtonPressed.sh,Script 1 of 2 to allow a single GPIO input to serve two functions.  Needs LongShort-ButtonReleased.sh as well.,v1.0
 GPIO,LongShort-ButtonReleased.sh,Script 2 of 2 to allow a single GPIO input to serve two functions.  Needs LongShort-ButtonPressed.sh as well.,v1.0
-Media,SqueezeLiteStart.sh,Start a SqueezeLite player,v0.4.0
-Media,SqueezeLiteStop.sh,Stop a running SqueezeLite player,v0.4.0
-Media,MP3StreamerStart.sh,Start A Internet Stream,v0.4.0
-Media,MP3StreamerStop.sh,Stop A Running Internet Stream,v0.4.0
-Media,PlayVideo.sh,Play a video,v0.4.0
-Media,PlayVideoIfNoOtherVideoIsPlaying.sh,Play a video only if no other video is playing,v0.4.0
-Media,StopAnyRunningVideo.sh,Stop any playing video,v0.4.0
+Media,SqueezeLiteStart.sh,Start a SqueezeLite player,v0.4.0,v6.9
+Media,SqueezeLiteStop.sh,Stop a running SqueezeLite player,v0.4.0,v6.9
+Media,MP3StreamerStart.sh,Start A Internet Stream,v0.4.0,v6.9
+Media,MP3StreamerStop.sh,Stop A Running Internet Stream,v0.4.0,v6.9
+Media,PlayVideo.sh,Play a video,v0.4.0,v5.9
+Media,PlayVideoIfNoOtherVideoIsPlaying.sh,Play a video only if no other video is playing,v0.4.0,v5.9
+Media,StopAnyRunningVideo.sh,Stop any playing video,v0.4.0,v5.9
 Media,DisplayStaticImage.sh,Display a static image file on video output,v1.0
 PixelOverlay,PixelOverlay-Clock.pl,Scroll a changing clock across a matrix or pixel tree,v1.0,v2.6.99
 PixelOverlay,PixelOverlay-Countdown.pl,Scroll a Christmas Countdown across a matrix or pixel tree,v1.0,v2.6.99
@@ -47,12 +47,12 @@ PixelOverlay,PixelOverlay-Clock.php,Scroll a changing clock across a matrix or p
 PixelOverlay,PixelOverlay-Countdown.php,Scroll a Christmas Countdown across a matrix or pixel tree,v2.7
 PixelOverlay,PixelOverlay-ScrollingText.php,Scroll static text across a matrix or pixel tree,v2.7
 PixelOverlay,PixelOverlay-NaughtyNice.php,Use Video capture to determine if subject is Naughty or Nice,v6.0
-RemoteControl,Remote-StartPlaylist.sh,Start a playlist on a remote FPP instance and play through it once,v0.4.0
-RemoteControl,Remote-StartRepeatingPlaylist.sh,Start a playlist on a remote FPP instance and play it repeatedly until stopped,v0.4.0
-RemoteControl,Remote-StopPlaylistGracefully.sh,Gracefully stop a playlist running on a remote FPP instance,v0.4.0
-RemoteControl,Remote-StopPlaylist.sh,Immediately stop a playlist running on a remote FPP instance,v0.4.0
-RemoteControl,Remote-StartEffect.sh,Start an effect on a remote FPP instance,v1.5
-RemoteControl,Remote-StopEffect.sh,Stop an effect running on a remote FPP instance,v1.5
+RemoteControl,Remote-StartPlaylist.sh,Start a playlist on a remote FPP instance and play through it once,v0.4.0,v6.9
+RemoteControl,Remote-StartRepeatingPlaylist.sh,Start a playlist on a remote FPP instance and play it repeatedly until stopped,v0.4.0,v6.9
+RemoteControl,Remote-StopPlaylistGracefully.sh,Gracefully stop a playlist running on a remote FPP instance,v0.4.0,6.9
+RemoteControl,Remote-StopPlaylist.sh,Immediately stop a playlist running on a remote FPP instance,v0.4.0,v6.9
+RemoteControl,Remote-StartEffect.sh,Start an effect on a remote FPP instance,v1.5,v6.9
+RemoteControl,Remote-StopEffect.sh,Stop an effect running on a remote FPP instance,v1.5,v6.9
 RemoteControl,Remote-RunScript.sh,Run a script on a remote FPP instance,v1.5
 RemoteControl,Remote-TriggerEvent.sh,Trigger an event on a remote FPP instance,v0.4.0,v6.9
 System,fppdWatcher.sh,Script to watch for fppd not running and restart if necessary,v1.0
