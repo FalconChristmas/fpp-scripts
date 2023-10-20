@@ -6,10 +6,9 @@
 #       installed from the Script Repository.             #
 ###########################################################
 
-# Fill in the IP addresses of each remote that you want to shutdown
-REMOTE_IPS="IP1 IP2 IP3"
+# Use scheduler Args to pass IPs/names to eliminate the need to manually edit and maintain a script file
 
-for IP in ${REMOTE_IPS}
+for IP in ${@}
 do
 	curl http://${IP}/runEventScript.php?scriptName=Shutdown.sh
 done
