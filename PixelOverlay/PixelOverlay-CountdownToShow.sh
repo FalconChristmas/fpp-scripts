@@ -16,43 +16,50 @@ put_json() {
     echo ""
 }
 
-FPP_STATUS=$(fpp -s)
-echo "FPP_STATUS = ${FPP_STATUS}"
+SETUP_DONE=0
 
-# Check that we got something meaningful.
-if [ -z "${FPP_STATUS}" ]; then
-    echo "Error with status value" >&2
-    exit 1
-fi
+while true; do
+    FPP_STATUS=$(fpp -s)
 
-PLAYING_STATUS=$(cut -d',' -f2 <<< "${FPP_STATUS}")
-echo "PLAYING_STATUS = ${PLAYING_STATUS}"
+    # Check that we got something meaningful.
+    if [ -z "${FPP_STATUS}" ]; then
+        echo "Error with status value" >&2
+        exit 1
+    fi
 
-# Check if player is idle
-if [ "${PLAYING_STATUS}" != "0" ]; then
-    echo "Not running count-down because player is already running."
-    exit 1
-fi
+    PLAYING_STATUS=$(cut -d',' -f2 <<< "${FPP_STATUS}")
 
-NEXT_SHOW_TIME=$((cut -d',' -f5 <<< "${FPP_STATUS}") | cut -d'-' -f1 | sed "s/@ //")
-echo "NEXT_SHOW_TIME = ${NEXT_SHOW_TIME}"
+    # Check if player is idle
+    if [ "${PLAYING_STATUS}" != "0" ]; then
+        echo "Not running count-down because player is already running."
+        exit 1
+    fi
 
-# Check there is something scheduled in the future.
-if [ -z "${NEXT_SHOW_TIME}" ]; then
-    echo "ERROR: There is nothing scheduled / nothing to countdown to."
-    exit 1
-fi
+    NEXT_SHOW_TIME=$((cut -d',' -f5 <<< "${FPP_STATUS}") | cut -d'-' -f1 | sed "s/@ //")
 
-SHOW_TIME=$(date +%s --date="${NEXT_SHOW_TIME}")
+    # Check there is something scheduled in the future.
+    if [ -z "${NEXT_SHOW_TIME}" ]; then
+        echo "ERROR: There is nothing scheduled / nothing to countdown to."
+        exit 1
+    fi
 
-# Clear the model
-curl "http://${HOST}/api/overlays/model/${MODEL_NAME}/clear"
-echo ""
+    SHOW_TIME=$(date +%s --date="${NEXT_SHOW_TIME}")
 
-# Enable the block (pass 2 for transparent mode, or 3 for transparent RGB)
-put_json "http://${HOST}/api/overlays/model/${MODEL_NAME}/state" "{\"State\":1}"
+    if [ "${SHOW_TIME}" -le $(date +%s) ]; then
+        break
+    fi
 
-while [ "${SHOW_TIME}" -ge $(date +%s) ]; do
+    if [ "${SETUP_DONE}" == "0" ]; then
+        # Clear the model
+        curl "http://${HOST}/api/overlays/model/${MODEL_NAME}/clear"
+        echo ""
+
+        # Enable the block (pass 2 for transparent mode, or 3 for transparent RGB)
+        put_json "http://${HOST}/api/overlays/model/${MODEL_NAME}/state" "{\"State\":1}"
+
+        SETUP_DONE=1
+    fi
+
     NOW="$(date +%s)"
     TIME_REMAINING="$(( ${SHOW_TIME} - ${NOW} ))"
     DAYS="$((${TIME_REMAINING} / 86400))"
