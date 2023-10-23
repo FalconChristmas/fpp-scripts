@@ -45,6 +45,7 @@ PixelOverlay,PixelOverlay-ScrollingText.pl,Scroll static text across a matrix or
 PixelOverlay,PixelOverlay-ScrollingTextMultiMatrix.pl,Scroll a text string across a pair of identical matrices,v1.0,v2.6.99
 PixelOverlay,PixelOverlay-Clock.php,Scroll a changing clock across a matrix or pixel tree,v2.7
 PixelOverlay,PixelOverlay-Countdown.php,Scroll a Christmas Countdown across a matrix or pixel tree,v2.7
+PixelOverlay,PixelOverlay-CountdownToShow.sh,Scroll a countdown to the next scheduled show time across a matrix or pixel tree,v1.0
 PixelOverlay,PixelOverlay-ScrollingText.php,Scroll static text across a matrix or pixel tree,v2.7
 PixelOverlay,PixelOverlay-NaughtyNice.php,Use Video capture to determine if subject is Naughty or Nice,v6.0
 RemoteControl,Remote-StartPlaylist.sh,Start a playlist on a remote FPP instance and play through it once,v0.4.0,v6.9
