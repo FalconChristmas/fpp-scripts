@@ -82,11 +82,11 @@ sudo /usr/bin/squeezelite -z ${SB_SERVER} ${SL_HOSTNAME} ${OTHER_ARGS}
 #
 #play 40
 #
-do_play () {	 
+do_play () {
     # This function only works if the Squeezebox server IP is set
     if  [ ! -z "$SERVER" ]; then
       echo "Sending play command to Squeezebox server"
-      printf "$HOSTNAME play\nexit\n" | nc $SERVER $SB_SERVER_CLI_PORT > /dev/null						 
+      printf "$HOSTNAME play\nexit\n" | nc $SERVER $SB_SERVER_CLI_PORT > /dev/null
     else
       echo "The IP address of the Squeezebox server is not set (variable: SERVER should be set). This is needed for the play function."
     fi
