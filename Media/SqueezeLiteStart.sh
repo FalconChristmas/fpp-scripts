@@ -2,12 +2,12 @@
 ##############################################################################
 # SqueezeLiteStart.sh - Start squeezelite to turn FPP into a Squeeze player
 ##############################################################################
-# To use this script with FPP v0.4.0, you must first install
-# squeezelite-armv6hf. Login to the Pi via SSH and run the following commands:
+# To use this script with FPP v7.0, you must first install
+# squeezelite. Login to the Pi via SSH and run the following commands:
 #
-# cd /usr/bin
-# sudo wget http://squeezelite-downloads.googlecode.com/git/squeezelite-armv6hf
-# sudo chmod 755 squeezelite-armv6hf
+# sudo apt-get install squeezelite
+# sudo service squeezelite stop
+# sudo update-rc.d squeezelite disable
 #
 #---------
 #
@@ -16,8 +16,9 @@
 #
 ##############################################################################
 # Script Actions - These are automatically executed in FPP v1.0 and higher
-# InstallAction: sudo wget -q -O /usr/bin/squeezelite-armv6hf http://squeezelite-downloads.googlecode.com/git/squeezelite-armv6hf
-# InstallAction: sudo chmod 755 /usr/bin/squeezelite-armv6hf
+# InstallAction: sudo apt-get install squeezelite
+# InstallAction: sudo service squeezelite stop
+# InstallAction: sudo update-rc.d squeezelite disable
 ##############################################################################
 
 ##############################################################################
@@ -50,6 +51,8 @@ SL_SOUNDCARD="sysdefault:CARD=ALSA"
 # Squeezebox server port for sending play and power off commands
 SB_SERVER_CLI_PORT="9090"
 
+# Any command that need to be run instead of normal startup (only supports pause at this time)
+COMMAND=""
 
 
 if [ "x${SERVER}" != "x" ]
@@ -71,7 +74,7 @@ then
 fi
 
 
-sudo /usr/bin/squeezelite-armv6hf -z ${SB_SERVER} ${SL_HOSTNAME} ${OTHER_ARGS}
+sudo /usr/bin/squeezelite -z ${SB_SERVER} ${SL_HOSTNAME} ${OTHER_ARGS}
 
 
 #
@@ -79,34 +82,48 @@ sudo /usr/bin/squeezelite-armv6hf -z ${SB_SERVER} ${SL_HOSTNAME} ${OTHER_ARGS}
 #
 #play 40
 #
-do_play () {
+do_play () {	 
     # This function only works if the Squeezebox server IP is set
     if  [ ! -z "$SERVER" ]; then
       echo "Sending play command to Squeezebox server"
-      printf "$HOSTNAME play\nexit\n" | nc $SERVER $SB_SERVER_CLI_PORT > /dev/null
+      printf "$HOSTNAME play\nexit\n" | nc $SERVER $SB_SERVER_CLI_PORT > /dev/null						 
     else
       echo "The IP address of the Squeezebox server is not set (variable: SERVER should be set). This is needed for the play function."
     fi
 }
 
-
+# Toggle pause/play
+do_pause () {
+    # This function only works if the Squeezebox server IP is set
+    if  [ ! -z "$SERVER" ]; then
+       echo "Sending pause command to Squeezebox server"
+       printf "$HOSTNAME pause\nexit\n" | nc $SERVER $SB_SERVER_CLI_PORT > /dev/null
+    else
+       echo "The IP address of the Squeezebox server is not set (variable: SERVER should be set). This is needed for the pause function."
+    fi
+}				   
 if [ ! -z "$SL_AUTO_PLAY" ] && [ "$SL_AUTO_PLAY" = "Yes" ]; then
   if  [ ! -z "$SERVER" ]; then
     echo "Wait until player is connected to Squeezebox server before sending play command"
     for i in $(seq 1 10)
     do
-      PLAYERCONNECTED=$(printf "$SL_NAME connected ?\nexit\n" | nc ${SERVER} ${SB_SERVER_CLI_PORT}  | tr -s ' '| cut -d ' ' -f3)
+      PLAYERCONNECTED=$(printf "$HOSTNAME connected ?\nexit\n" | nc ${SERVER} ${SB_SERVER_CLI_PORT}  | tr -s ' '| cut -d ' ' -f3)
       if [ "$PLAYERCONNECTED" = "1" ]
       then
-        echo "Player connected to Squeezebox server after $i seconds"
+        echo "$HOSTNAME player connected to Squeezebox server after $i seconds"
         break
       fi
       echo "Not connected after $i seconds..."
       sleep 1
     done
-    if [ "$PLAYERCONNECTED" = "1" ]
-    then
-      do_play
+    if [ "$PLAYERCONNECTED" = "1" ]; then
+      if  [ ! -z "$COMMAND" ]; then
+        if  [ "$COMMAND" -eq "pause" ]; then
+          do_pause
+        fi
+      else
+        do_play
+      fi	
     else
       echo "Could not send play command to player $HOSTNAME on Squeezebox server $SERVER"
     fi
