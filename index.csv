@@ -4,12 +4,12 @@
 # Format: Directory,Filename,Description,min_rfs_ver,max_rfs_ver #
 ##################################################################
 Config,Enable_HiFiBerry.sh,Script to enable support for a HiFiBerry DAC on the Pi,v1.5
-Control,CheckIfPlaying.sh,Run scripts based on whether or not FPP is currently playing a sequence of some sort,v1.5
-Control,CycleRandomPlaylists.sh,Randomly cycle through playlists,v3.0
-Control,CycleRandomSequences.sh,Randomly cycle through sequences,v3.0
-Control,GoToNextPlaylistItem.sh,Jump to the next item in the current playlist,v0.4.0
-Control,GoToPreviousPlaylistItem.sh, Jump to the previous item in the current playlist,v0.4.0
-Control,PlayEffectWhenNotPlayingFSEQ.sh,Play an effect sequence whenever a .fseq sequence is not running,v1.0
+Control,CheckIfPlaying.sh,Run scripts based on whether or not FPP is currently playing a sequence of some sort,v1.5,v7.99
+Control,CycleRandomPlaylists.sh,Randomly cycle through playlists,v3.0,v7.99
+Control,CycleRandomSequences.sh,Randomly cycle through sequences,v3.0,v7.99
+Control,GoToNextPlaylistItem.sh,Jump to the next item in the current playlist,v0.4.0,v7.99
+Control,GoToPreviousPlaylistItem.sh, Jump to the previous item in the current playlist,v0.4.0,v7.99
+Control,PlayEffectWhenNotPlayingFSEQ.sh,Play an effect sequence whenever a .fseq sequence is not running,v1.0,v7.99
 Control,ScheduledPlaylistEnable.sh,Enable a scheduled playlist,v1.0
 Control,ScheduledPlaylistDisable.sh,Disable a scheduled playlist,v1.0
 Control,ScheduledPlaylistsUpdate.sh,Enable/Disable multiple scheduled playlists,v1.0
@@ -19,16 +19,16 @@ Control,StartPlaylist.sh,Start a playlist and play through it once,v0.4.0,v7.99
 Control,StartRepeatingPlaylist.sh,Start a playlist and play it repeatedly until stopped,v0.4.0,v7.99
 Control,StaticOn.sh,Turn On channels for static display items,v1.0
 Control,StaticOff.sh,Turn Off channels for static display items,v1.0
-Control,StopEffect.sh,Stop a running effect by name,v1.5
-Control,StopPlaylistGracefully.sh,Stop a running playlist gracefully,v0.4.0
-Control,StopPlaylist.sh,Stop a running playlist immediately,v0.4.0
+Control,StopEffect.sh,Stop a running effect by name,v1.5,v7.99
+Control,StopPlaylistGracefully.sh,Stop a running playlist gracefully,v0.4.0,v7.99
+Control,StopPlaylist.sh,Stop a running playlist immediately,v0.4.0,v7.99
 Control,SwitchToBridgeMode.sh,Switch a running FPP to Bridge mode,v0.4.0,v7.99
 Control,SwitchToPlayerMode.sh,Switch a running FPP to Player mode,v0.4.0,v7.99
 Control,SwitchToMasterMode.sh,Switch a running FPP to Master mode,v0.4.0,v7.99
 Control,SwitchToRemoteMode.sh,Switch a running FPP to Remote mode,v0.4.0,v7.99
 Control,UserCallbackHook.sh,Callback script to allow hooking into FPP system scripts,v1.0
-GPIO,GPIO-On.sh,Turn ON a GPIO Output,v2.0.0,v7.99
-GPIO,GPIO-Off.sh,Turn OFF a GPIO Output,v2.0.0,v7.99
+GPIO,GPIO-On.sh,Turn ON a GPIO Output,v2.0.0
+GPIO,GPIO-Off.sh,Turn OFF a GPIO Output,v2.0.0
 GPIO,LongShort-ButtonPressed.sh,Script 1 of 2 to allow a single GPIO input to serve two functions.  Needs LongShort-ButtonReleased.sh as well.,v1.0
 GPIO,LongShort-ButtonReleased.sh,Script 2 of 2 to allow a single GPIO input to serve two functions.  Needs LongShort-ButtonPressed.sh as well.,v1.0
 Media,SqueezeLiteStart.sh,Start a SqueezeLite player,v0.4.0,v6.9
@@ -60,7 +60,7 @@ System,fppdWatcher.sh,Script to watch for fppd not running and restart if necess
 System,fppdWatcherStart.sh,Script to start fppdWatcher.sh detached,v1.0
 System,Reboot.sh,Reboot the Pi/BBB,v0.4.0
 System,Shutdown.sh,Shutdown the Pi/BBB,v0.4.0
-System,ShutdownRemotes.sh,Shutdown a set of Remote FPP instances,v1.5
+System,ShutdownRemotes.sh,Shutdown a set of Remote FPP instances,v1.5,v7.99
 System,ConvertPiRootToReadOnly.sh,Convert a Pi's SD card to read-only.,v1.8,v2.1
 System,ConvertReadOnlyPitoRW.sh,Convert a Pi's Read-Only SD card back to Read-Write.,v1.8,v2.1
 System,DisableOnboardWifi-Pi3.sh,Disable a Pi3's onboard WiFi (needs reboot),v1.5
