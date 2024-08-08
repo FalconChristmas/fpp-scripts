@@ -70,5 +70,5 @@ System,UpdateGitRepoOrigin.sh,Update FPP Git Repository Origin URL,v2.5,v5.6
 System,Fix_FPP_Update_Script.sh,Update git_pull script to allow continued updates from FPP git source repository,v2.0,v5.6
 System,DownloadFPPOS.sh,Download the Lastest FPPOS File off the GitHub Releases Page,v3.6.2,v7.99
 System,add_fpp_src_samba.sh,Add FPP Source Folder to Samba Service,v1.0
-Control,Send_Email_Script.sh,Send email as configured in FPP Settings. NOTE: Due to security settings on Gmail for this to work requires you to enable the "Less secure app access" in your Gmail account,v2.0
+Control,Send_Email_Script.sh,Send email as configured in FPP Settings. NOTE: Due to security settings on Gmail for this to work requires you to enable the Less secure app access in your Gmail account,v2.0
 #
