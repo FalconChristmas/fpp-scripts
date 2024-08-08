@@ -31,8 +31,8 @@ GPIO,GPIO-On.sh,Turn ON a GPIO Output,v2.0.0
 GPIO,GPIO-Off.sh,Turn OFF a GPIO Output,v2.0.0
 GPIO,LongShort-ButtonPressed.sh,Script 1 of 2 to allow a single GPIO input to serve two functions.  Needs LongShort-ButtonReleased.sh as well.,v1.0
 GPIO,LongShort-ButtonReleased.sh,Script 2 of 2 to allow a single GPIO input to serve two functions.  Needs LongShort-ButtonPressed.sh as well.,v1.0
-Media,SqueezeLiteStart.sh,Start a SqueezeLite player,v0.4.0,v6.9
-Media,SqueezeLiteStop.sh,Stop a running SqueezeLite player,v0.4.0,v6.9
+Media,SqueezeLiteStart.sh,Start a SqueezeLite player,v7.0
+Media,SqueezeLiteStop.sh,Stop a running SqueezeLite player,v7.0
 Media,MP3StreamerStart.sh,Start A Internet Stream,v0.4.0,v6.9
 Media,MP3StreamerStop.sh,Stop A Running Internet Stream,v0.4.0,v6.9
 Media,PlayVideo.sh,Play a video,v0.4.0,v5.9
