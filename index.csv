@@ -56,7 +56,7 @@ RemoteControl,Remote-StartEffect.sh,Start an effect on a remote FPP instance,v1.
 RemoteControl,Remote-StopEffect.sh,Stop an effect running on a remote FPP instance,v1.5,v6.9
 RemoteControl,Remote-RunScript.sh,Run a script on a remote FPP instance,v1.5,v7.99
 RemoteControl,Remote-TriggerEvent.sh,Trigger an event on a remote FPP instance,v0.4.0,v6.9
-System,fppdWatcher.sh,Script to watch for fppd not running and restart if necessary,v1.0
+System,fppdWatcher.sh,Script to watch for fppd not running and restart if necessary,v1.0,v7.99
 System,fppdWatcherStart.sh,Script to start fppdWatcher.sh detached,v1.0
 System,Reboot.sh,Reboot the Pi/BBB,v0.4.0
 System,Shutdown.sh,Shutdown the Pi/BBB,v0.4.0
