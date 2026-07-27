@@ -28,7 +28,7 @@ Control,SwitchToMasterMode.sh,Switch a running FPP to Master mode,v0.4.0,v7.99
 Control,SwitchToRemoteMode.sh,Switch a running FPP to Remote mode,v0.4.0,v7.99
 Control,UserCallbackHook.sh,Callback script to allow hooking into FPP system scripts,v1.0
 GPIO,GPIO-On.sh,Turn ON a GPIO Output,v2.0.0
-GPIO,GPIO-Off.sh,Turn OFF a GPIO Output,v2.0.0
+GPIO,GPIO-Off.sh,Turn OFF a GPIO Output,v2.0.0,
 GPIO,LongShort-ButtonPressed.sh,Script 1 of 2 to allow a single GPIO input to serve two functions.  Needs LongShort-ButtonReleased.sh as well.,v1.0
 GPIO,LongShort-ButtonReleased.sh,Script 2 of 2 to allow a single GPIO input to serve two functions.  Needs LongShort-ButtonPressed.sh as well.,v1.0
 Media,SqueezeLiteStart.sh,Start a SqueezeLite player,v7.0
@@ -38,7 +38,7 @@ Media,MP3StreamerStop.sh,Stop A Running Internet Stream,v0.4.0,v6.9
 Media,PlayVideo.sh,Play a video,v0.4.0,v5.9
 Media,PlayVideoIfNoOtherVideoIsPlaying.sh,Play a video only if no other video is playing,v0.4.0,v5.9
 Media,StopAnyRunningVideo.sh,Stop any playing video,v0.4.0,v5.9
-Media,DisplayStaticImage.sh,Display a static image file on video output,v1.0
+Media,DisplayStaticImage.sh,Display a static image file on video output,v1.0,v9.99
 PixelOverlay,PixelOverlay-Clock.pl,Scroll a changing clock across a matrix or pixel tree,v1.0,v2.6.99
 PixelOverlay,PixelOverlay-Countdown.pl,Scroll a Christmas Countdown across a matrix or pixel tree,v1.0,v2.6.99
 PixelOverlay,PixelOverlay-ScrollingText.pl,Scroll static text across a matrix or pixel tree,v0.4.0,v2.6.99
@@ -63,12 +63,12 @@ System,Shutdown.sh,Shutdown the Pi/BBB,v0.4.0
 System,ShutdownRemotes.sh,Shutdown a set of Remote FPP instances,v1.5,v7.99
 System,ConvertPiRootToReadOnly.sh,Convert a Pi's SD card to read-only.,v1.8,v2.1
 System,ConvertReadOnlyPitoRW.sh,Convert a Pi's Read-Only SD card back to Read-Write.,v1.8,v2.1
-System,DisableOnboardWifi-Pi3.sh,Disable a Pi3's onboard WiFi (needs reboot),v1.5
-System,EnableOnboardWifi-Pi3.sh,Enable a Pi3's onboard WiFi (needs reboot),v1.5
+System,DisableOnboardWifi-Pi3.sh,Disable a Pi3's onboard WiFi (needs reboot),v1.5,v9.99
+System,EnableOnboardWifi-Pi3.sh,Enable a Pi3's onboard WiFi (needs reboot),v1.5,v9.99
 System,UpdateOmxplayerForAlsa.sh,*BETA* script to update omxplayer on FPP v1.8 SD Pi image to support ALSA and USB sound cards,v1.8,v2.0
 System,UpdateGitRepoOrigin.sh,Update FPP Git Repository Origin URL,v2.5,v5.6
 System,Fix_FPP_Update_Script.sh,Update git_pull script to allow continued updates from FPP git source repository,v2.0,v5.6
 System,DownloadFPPOS.sh,Download the Lastest FPPOS File off the GitHub Releases Page,v3.6.2,v7.99
-System,add_fpp_src_samba.sh,Add FPP Source Folder to Samba Service,v1.0
+System,add_fpp_src_samba.sh,Add FPP Source Folder to Samba Service,v1.0,v9.99
 Control,Send_Email_Script.sh,Send email as configured in FPP Settings. NOTE: Due to security settings on Gmail for this to work requires you to enable the Less secure app access in your Gmail account,v2.0
 #
