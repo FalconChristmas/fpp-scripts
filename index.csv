@@ -10,9 +10,9 @@ Control,CycleRandomSequences.sh,Randomly cycle through sequences,v3.0,v7.99
 Control,GoToNextPlaylistItem.sh,Jump to the next item in the current playlist,v0.4.0,v7.99
 Control,GoToPreviousPlaylistItem.sh, Jump to the previous item in the current playlist,v0.4.0,v7.99
 Control,PlayEffectWhenNotPlayingFSEQ.sh,Play an effect sequence whenever a .fseq sequence is not running,v1.0,v7.99
-Control,ScheduledPlaylistEnable.sh,Enable a scheduled playlist,v1.0
-Control,ScheduledPlaylistDisable.sh,Disable a scheduled playlist,v1.0
-Control,ScheduledPlaylistsUpdate.sh,Enable/Disable multiple scheduled playlists,v1.0
+Control,ScheduledPlaylistEnable.sh,Enable a scheduled playlist,v1.0,v3.99
+Control,ScheduledPlaylistDisable.sh,Disable a scheduled playlist,v1.0,v3.99
+Control,ScheduledPlaylistsUpdate.sh,Enable/Disable multiple scheduled playlists,v1.0,v3.99
 Control,StartEffect.sh,Start an effect and play it once,v1.5,v6.9
 Control,StartEffectLooping.sh,Start an effect and loop until stopped,v1.5,v7.99
 Control,StartPlaylist.sh,Start a playlist and play through it once,v0.4.0,v7.99
