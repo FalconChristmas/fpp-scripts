@@ -25,27 +25,27 @@ compatibility window before FPP 8/9 are historical and not part of this migratio
 
 | Script | Category | Suggested Replacement |
 |---|---|---|
-| [GPIO-On.sh](GPIO/GPIO-On.sh) | GPIO | use FPP Command: **GPIO → Set Output** |
+| [Send_Email_Script.sh](Control/Send_Email_Script.sh) | Control | **Partially replaced.** FPP now has outbound email support (Settings → Email: SMTP server/port/login/from/to) and a built-in "send test email" action, so you no longer need to hand-configure `mail`/`msmtp` yourself. However, there is currently no built-in FPP Command to send a *custom* subject/message from a playlist, schedule, or event — that still needs a script (now much simpler, since it can just call `mail` using the FPP-managed configuration) or a small plugin exposing it as a proper Command. Nobody has built that plugin yet — if this matters to you, contributions welcome. |
+| [StaticOff.sh](Control/StaticOff.sh) | Control | use FPP Command: **Overlay Model → Clear** |
+| [StaticOn.sh](Control/StaticOn.sh) | Control | use FPP Command: **Overlay Model → Fill** |
+| [UserCallbackHook.sh](Control/UserCallbackHook.sh) | Control | Use the built-in **FPPD_STARTED** / **FPPD_STOPPED** Command Presets instead — configurable entirely from the FPP web UI, no script needed. *(FPP does still call this script, if present, at `boot`, `preStart`, `postStart`, `preStop`, and `postStop` — but it must be provided manually, FPP doesn't ship it.)* |
 | [GPIO-Off.sh](GPIO/GPIO-Off.sh) | GPIO | use FPP Command: **GPIO → Set Output** |
+| [GPIO-On.sh](GPIO/GPIO-On.sh) | GPIO | use FPP Command: **GPIO → Set Output** |
 | [LongShort-ButtonPressed.sh](GPIO/LongShort-ButtonPressed.sh) | GPIO | long/short press detection is now built into the GPIO Input configuration page directly |
 | [LongShort-ButtonReleased.sh](GPIO/LongShort-ButtonReleased.sh) | GPIO | long/short press detection is now built into the GPIO Input configuration page directly |
-| [StaticOn.sh](Control/StaticOn.sh) | Control | use FPP Command: **Overlay Model → Fill** |
-| [StaticOff.sh](Control/StaticOff.sh) | Control | use FPP Command: **Overlay Model → Clear** |
-| [PixelOverlay-ScrollingText.php](PixelOverlay/PixelOverlay-ScrollingText.php) | PixelOverlay | use FPP Command: **Overlay Model → Effect** (scrolling text effect) |
+| [DisplayStaticImage.sh](Media/DisplayStaticImage.sh) | Media | **Deprecated.** No replacement provided. |
+| [SqueezeLiteStart.sh](Media/SqueezeLiteStart.sh) | Media | **Deprecated.** No replacement provided. |
+| [SqueezeLiteStop.sh](Media/SqueezeLiteStop.sh) | Media | **Deprecated.** No replacement provided. |
 | [PixelOverlay-Clock.php](PixelOverlay/PixelOverlay-Clock.php) | PixelOverlay | [FPP-Simple-Countdown](https://github.com/FalconChristmas/fpp-Simple-Countdown) plugin |
 | [PixelOverlay-Countdown.php](PixelOverlay/PixelOverlay-Countdown.php) | PixelOverlay | [FPP-Simple-Countdown](https://github.com/FalconChristmas/fpp-Simple-Countdown) plugin |
 | [PixelOverlay-CountdownToShow.sh](PixelOverlay/PixelOverlay-CountdownToShow.sh) | PixelOverlay | [FPP-Simple-Countdown](https://github.com/FalconChristmas/fpp-Simple-Countdown) plugin |
 | [PixelOverlay-NaughtyNice.php](PixelOverlay/PixelOverlay-NaughtyNice.php) | PixelOverlay | [fpp-VideoCapture](https://github.com/FalconChristmas/fpp-VideoCapture) plugin combined with FPP Commands |
-| [Reboot.sh](System/Reboot.sh) | System | **Reboot** FPP Command, added in FPP 10 |
-| [Shutdown.sh](System/Shutdown.sh) | System | **Shutdown** FPP Command, added in FPP 10 |
-| [UserCallbackHook.sh](Control/UserCallbackHook.sh) | Control | Use the built-in **FPPD_STARTED** / **FPPD_STOPPED** Command Presets instead — configurable entirely from the FPP web UI, no script needed. *(FPP does still call this script, if present, at `boot`, `preStart`, `postStart`, `preStop`, and `postStop` — but it must be provided manually, FPP doesn't ship it.)* |
-| [Send_Email_Script.sh](Control/Send_Email_Script.sh) | Control | **Partially replaced.** FPP now has outbound email support (Settings → Email: SMTP server/port/login/from/to) and a built-in "send test email" action, so you no longer need to hand-configure `mail`/`msmtp` yourself. However, there is currently no built-in FPP Command to send a *custom* subject/message from a playlist, schedule, or event — that still needs a script (now much simpler, since it can just call `mail` using the FPP-managed configuration) or a small plugin exposing it as a proper Command. Nobody has built that plugin yet — if this matters to you, contributions welcome. |
-| [SqueezeLiteStart.sh](Media/SqueezeLiteStart.sh) | Media | **Deprecated.** No replacement provided. |
-| [SqueezeLiteStop.sh](Media/SqueezeLiteStop.sh) | Media | **Deprecated.** No replacement provided. |
-| [DisplayStaticImage.sh](Media/DisplayStaticImage.sh) | Media | **Deprecated.** No replacement provided. |
+| [PixelOverlay-ScrollingText.php](PixelOverlay/PixelOverlay-ScrollingText.php) | PixelOverlay | use FPP Command: **Overlay Model → Effect** (scrolling text effect) |
+| [add_fpp_src_samba.sh](System/add_fpp_src_samba.sh) | System | **Deprecated.** No replacement provided. |
 | [DisableOnboardWifi-Pi3.sh](System/DisableOnboardWifi-Pi3.sh) | System | **No longer relevant.** |
 | [EnableOnboardWifi-Pi3.sh](System/EnableOnboardWifi-Pi3.sh) | System | **No longer relevant.** |
-| [add_fpp_src_samba.sh](System/add_fpp_src_samba.sh) | System | **Deprecated.** No replacement provided. |
+| [Reboot.sh](System/Reboot.sh) | System | **Reboot** FPP Command, added in FPP 10 |
+| [Shutdown.sh](System/Shutdown.sh) | System | **Shutdown** FPP Command, added in FPP 10 |
 
 ## Everything else in this repository
 
