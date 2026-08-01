@@ -42,8 +42,8 @@ compatibility window before FPP 8/9 are historical and not part of this migratio
 | PixelOverlay | [PixelOverlay-NaughtyNice.php](PixelOverlay/PixelOverlay-NaughtyNice.php) | [fpp-VideoCapture](https://github.com/FalconChristmas/fpp-VideoCapture) plugin combined with FPP Commands |
 | PixelOverlay | [PixelOverlay-ScrollingText.php](PixelOverlay/PixelOverlay-ScrollingText.php) | FPP Command: **Overlay Model → Effect** (scrolling text effect) |
 | System | [add_fpp_src_samba.sh](System/add_fpp_src_samba.sh) | No replacement provided. |
-| System | [DisableOnboardWifi-Pi3.sh](System/DisableOnboardWifi-Pi3.sh) | **No longer relevant.** |
-| System | [EnableOnboardWifi-Pi3.sh](System/EnableOnboardWifi-Pi3.sh) | **No longer relevant.** |
+| System | [DisableOnboardWifi-Pi3.sh](System/DisableOnboardWifi-Pi3.sh) | No longer relevant. |
+| System | [EnableOnboardWifi-Pi3.sh](System/EnableOnboardWifi-Pi3.sh) | No longer relevant. |
 | System | [Reboot.sh](System/Reboot.sh) | FPP Command: **Reboot**, from FPP 10 |
 | System | [Shutdown.sh](System/Shutdown.sh) | FPP Command: **Shutdown**, from FPP 10 |
 
