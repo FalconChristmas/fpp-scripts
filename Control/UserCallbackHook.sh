@@ -2,6 +2,13 @@
 ################################################################################
 # UserCallbackHook.sh
 #
+# NOTE: For reacting to fppd starting or stopping, use the built-in
+# FPPD_STARTED / FPPD_STOPPED Command Presets instead (Content Setup ->
+# Command Presets) - configurable entirely from the FPP web UI, no script
+# needed. (FPP does still call this script, if present, at each of the
+# moments below - but it isn't installed for you, you have to place it in
+# media/scripts yourself.)
+#
 # This is an optional script you can use to run your own commands at
 # specific moments in FPP's startup and shutdown process, without needing
 # to write a full plugin. FPP automatically looks for this file and, if it
